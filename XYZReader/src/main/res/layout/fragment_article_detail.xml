@@ -1,10 +1,9 @@
 <com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/draw_insets_frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.xyzreader.ui.ObservableScrollView
+    <com.example.xyzreader.ui.NestedScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -89,7 +88,7 @@
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
         </FrameLayout>
-    </com.example.xyzreader.ui.ObservableScrollView>
+    </com.example.xyzreader.ui.NestedScrollView>
 
     <android.support.design.widget.FloatingActionButton android:id="@+id/share_fab"
         android:background="@drawable/add_fab_background"
