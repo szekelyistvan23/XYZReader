@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.xyzreader.ui.NestedScrollView
+    <ScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -20,16 +20,14 @@
                 <!--suppress AndroidLintContentDescription -->
                 <ImageView
                     android:id="@+id/photo"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                     />
-
-                <View
                     android:layout_width="match_parent"
-                    android:layout_height="112dp"
-                    android:background="@drawable/photo_background_protection" />
-
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                     />
             </FrameLayout>
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <com.example.xyzreader.ui.MaxWidthLinearLayout
                 android:orientation="vertical"
@@ -85,10 +83,10 @@
                     android:textColorLink="@color/theme_accent"
                     android:textSize="@dimen/detail_body_text_size"
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
-
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
+            </android.support.v4.widget.NestedScrollView>
         </FrameLayout>
-    </com.example.xyzreader.ui.NestedScrollView>
+    </ScrollView>
 
     <android.support.design.widget.FloatingActionButton android:id="@+id/share_fab"
         android:background="@drawable/add_fab_background"
