@@ -1,5 +1,5 @@
-<com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/draw_insets_frame_layout"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/article_detail_frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -98,4 +98,4 @@
         android:elevation="6dp"
         android:contentDescription="@string/action_share" />
 
-</com.example.xyzreader.ui.DrawInsetsFrameLayout>
+</FrameLayout>
