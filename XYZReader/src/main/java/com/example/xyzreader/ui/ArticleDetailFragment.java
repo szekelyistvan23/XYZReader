@@ -215,7 +215,7 @@ public class ArticleDetailFragment extends Fragment implements
                                 + "</font>"));
 
             }
-            String prepareString = mCursor.getString(ArticleLoader.Query.BODY).replaceAll("(\r\n\r\n)", ("\n"+"    "));
+            String prepareString = mCursor.getString(ArticleLoader.Query.BODY).replaceAll("(\r\n\r\n)", ("\n"+"     "));
             prepareString = prepareString.replaceAll("(\r\n)", (" "));
             bodyView.setText(prepareString);
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
@@ -224,7 +224,7 @@ public class ArticleDetailFragment extends Fragment implements
                         public void onResponse(ImageLoader.ImageContainer imageContainer, boolean b) {
                             Bitmap bitmap = imageContainer.getBitmap();
                             if (bitmap != null) {
-                                Palette p = Palette.generate(bitmap, 12);
+                                Palette p = Palette.from(bitmap).maximumColorCount(12).generate();
                                 mMutedColor = p.getDarkMutedColor(0xFF333333);
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());
                                 mRootView.findViewById(R.id.meta_bar)
