@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            <LinearLayout
+            <android.support.design.widget.AppBarLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                     android:textColorLink="@color/theme_accent"
                     android:textSize="@dimen/detail_body_text_size"
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
-            </LinearLayout>
+            </android.support.design.widget.AppBarLayout>
             </android.support.v4.widget.NestedScrollView>
         </FrameLayout>
     </ScrollView>
